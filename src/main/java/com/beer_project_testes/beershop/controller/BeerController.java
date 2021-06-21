@@ -6,6 +6,7 @@ import com.beer_project_testes.beershop.exception.BeerAlreadyRegisteredException
 import com.beer_project_testes.beershop.exception.BeerNotFoundException;
 import com.beer_project_testes.beershop.exception.BeerStockExceededException;
 import com.beer_project_testes.beershop.service.BeerService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/beers")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
+@Api(value = "Beer Stock API REST")
 @CrossOrigin(origins = "*")
 public class BeerController implements BeerControllerDocs {
 
